@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class ContinueShopingPopupPage {
     public ShoppingCardPage pressCartCheckout(){
         $("#cart-popup-container .main-button").scrollIntoView(true).click();
-        //SharedContext.sleep(5);
         sleep(5000);
         return Selenide.page(ShoppingCardPage.class);
     }

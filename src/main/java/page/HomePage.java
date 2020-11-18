@@ -13,7 +13,6 @@ public class HomePage {
         $(".main-search__input #q").setValue(query).pressEnter();
         System.out.println("enter search criteria: " + query);
         sleep(10000);
-        //SharedContext.sleep(10);
         //$(".page-title h1").waitUntil(Condition.visible, 5000).waitUntil(Condition.matchesText("Meklēšanas rezultāti frāzei \""+query+"\""), 500);
         return page(SearchResultPage.class);
     }

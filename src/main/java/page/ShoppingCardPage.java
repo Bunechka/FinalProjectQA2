@@ -16,7 +16,6 @@ public class ShoppingCardPage {
 
     public PurchaseOptionPage clickDoPayment(){
         $(By.name("commit")).click();
-        //SharedContext.sleep(5);
         sleep(5000);
         return Selenide.page(PurchaseOptionPage.class);
     }
