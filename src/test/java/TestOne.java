@@ -2,6 +2,8 @@ import com.codeborne.selenide.Selenide;
 import org.junit.Test;
 import page.*;
 
+import static com.codeborne.selenide.Selenide.sleep;
+
 public class TestOne {
     @Test
     public void open() {
@@ -23,6 +25,7 @@ public class TestOne {
         PurchaseOptionPage purchaseOptionPage = shoppingCardPage.clickDoPayment();
         purchaseOptionPage.useUnregisteredOption("test@selenide.com");
 
-        SharedContext.sleep(100);
+        sleep(10000);
+
     }
 }

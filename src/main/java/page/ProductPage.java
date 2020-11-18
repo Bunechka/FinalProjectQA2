@@ -18,7 +18,8 @@ public class ProductPage {
 
     public ContinueShopingPopupPage addProductToCart(){
         $("#add_to_cart_btn").scrollIntoView(true).click(ClickOptions.usingJavaScript());
-        SharedContext.sleep(5);
+        //SharedContext.sleep(5);
+        sleep(5000);
 
         return page(ContinueShopingPopupPage.class);
     }

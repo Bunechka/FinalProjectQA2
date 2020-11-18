@@ -4,6 +4,7 @@ import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.sleep;
 
 public class ShoppingCardPage {
     public String getItemName(){
@@ -15,7 +16,8 @@ public class ShoppingCardPage {
 
     public PurchaseOptionPage clickDoPayment(){
         $(By.name("commit")).click();
-        SharedContext.sleep(5);
+        //SharedContext.sleep(5);
+        sleep(5000);
         return Selenide.page(PurchaseOptionPage.class);
     }
 }
