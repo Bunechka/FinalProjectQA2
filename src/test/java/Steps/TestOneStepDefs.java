@@ -26,7 +26,6 @@ public class TestOneStepDefs {
 
     @Then("^search for product (.*)$")
     public void search_for_product(String product) {
-        // Write code here that turns the phrase above into concrete actions
         searchResultPage = homePage.searchProduct(product);
     }
 
@@ -57,6 +56,8 @@ public class TestOneStepDefs {
 
         assertEquals(cartData.getProductName(), shoppingCardPage.getItemName());
         assertEquals(cartData.getProductPrice(), shoppingCardPage.getItemPrice());
+        System.out.println("Shopping cart item price is " + cartData.getProductPrice());
+        System.out.println("Chosen product price was " + shoppingCardPage.getItemPrice());
 
         PurchaseOptionPage purchaseOptionPage = shoppingCardPage.clickDoPayment();
         purchaseOrderPage = purchaseOptionPage.useUnregisteredOption("test@selenide.com");
