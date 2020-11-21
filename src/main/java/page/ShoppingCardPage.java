@@ -11,7 +11,7 @@ public class ShoppingCardPage {
         return $(".detailed-cart-item .detailed-cart-item__name").text().trim();
     }
     public String getItemPrice(){
-        return $(".detailed-cart-item .detailed-cart-item__price").text().trim();
+        return $(".detailed-cart-item .detailed-cart-item__price").text().replace(" €","").trim();
     }
 
     public PurchaseOptionPage clickDoPayment(){
