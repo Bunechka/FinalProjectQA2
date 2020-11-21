@@ -5,14 +5,20 @@ plugins {
 group 'org.example'
 version '1.0-SNAPSHOT'
 
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
     testImplementation("org.assertj:assertj-core:3.17.2")
-    testCompile group: 'org.assertj', name: 'assertj-core', version: '3.6.1'
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.6.1'
     testCompile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
     compile group: 'org.assertj', name: 'assertj-core', version: '3.6.1'
